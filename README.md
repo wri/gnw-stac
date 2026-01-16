@@ -1,4 +1,4 @@
-# STAC Ingestion for Zeno
+# STAC Ingestion for Global Nature Watch
 
 ## Set up
 

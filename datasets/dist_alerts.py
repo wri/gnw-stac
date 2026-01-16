@@ -36,7 +36,7 @@ def get_latest_version_from_s3() -> str:
     """
     s3_client = boto3.client(
         "s3",
-        config=boto3.session.Config(user_agent_extra="project-zeno"),
+        config=boto3.session.Config(),
     )
 
     print(
