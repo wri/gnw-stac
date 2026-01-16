@@ -1,0 +1,41 @@
+[project]
+name = "gnw-stac"
+version = "0.1.0"
+description = "Global Nature Watch STAC Catalog data ingestion"
+readme = "README.md"
+requires-python = ">=3.12.0"
+dependencies = [
+    "python-dotenv==1.2.1",
+    "boto3",
+    "pystac",
+    "rio-stac",
+    "pypgstac",
+    "psycopg",
+]
+
+
+[dependency-groups]
+dev = [
+    "ruff==0.14.10",
+    "pre-commit==4.5.1",
+]
+
+
+[tool.ruff.lint]
+select = [
+    "COM",  # flake8-commas
+    "F",    # pyflakes
+    "I",    # isort
+    "RUF",  # ruff-specific
+    "UP",   # pyupgrade
+]
+ignore = [
+    "D100",  # Missing docstring in public module
+    "D104",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.uv]
+default-groups = ["dev"]
